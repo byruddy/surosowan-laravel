@@ -32,7 +32,8 @@ CREATE TABLE IF NOT EXISTS `artikel` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Data exporting was unselected.
+-- Dumping data for table penulis.artikel: ~0 rows (approximately)
+DELETE FROM `artikel`;
 
 -- Dumping structure for table penulis.pengguna
 DROP TABLE IF EXISTS `pengguna`;
@@ -46,7 +47,10 @@ CREATE TABLE IF NOT EXISTS `pengguna` (
   PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Data exporting was unselected.
+-- Dumping data for table penulis.pengguna: ~1 rows (approximately)
+DELETE FROM `pengguna`;
+INSERT INTO `pengguna` (`username`, `password`, `nama`, `jenis_kelamin`, `tgl_diubah`, `tgl_dibuat`) VALUES
+	('radit', '$2y$10$EGzXiJCE88cLdityh6th.Otn6xmwpMhVy5/5a8PEVcW7m.jeO.7eS', 'raditya dika', 'Laki-laki', '2022-12-22 14:16:12', '2022-12-22 10:12:14');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

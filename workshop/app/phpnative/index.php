@@ -13,9 +13,22 @@
     <main>
       <div class="container py-4">
         <header class="pb-3 mb-4 border-bottom">
-          <a href="<?= BASE_URL ?>" class="d-flex align-items-center text-dark text-decoration-none">
-            <span class="fs-4"><?= NAME_APP ?></span>
-          </a>
+          <div class="row">
+            <div class="col">
+              <a href="<?= BASE_URL ?>" class="d-flex align-items-center text-dark text-decoration-none">
+                <span class="fs-4"><?= NAME_APP ?></span>
+              </a>
+            </div>
+            <div class="col text-end">
+              <?php 
+              if(isset($_SESSION['loggedin'])){
+              ?>
+              <a href="<?= BASE_URL.'views/akun.php' ?>" class="btn btn-primary"><?= $_SESSION['username'] ?></a>
+              <?php 
+              }
+              ?>
+            </div>
+          </div>
         </header>
 
         <div class="p-5 mb-4 bg-light rounded-3">
@@ -27,6 +40,10 @@
           </div>
         </div>
 
+
+        <?php 
+        if (!isset($_SESSION['loggedin'])){
+        ?>
         <div class="row align-items-md-stretch">
           <div class="col-md-6">
             <div class="h-100 p-5 text-bg-dark rounded-3">
@@ -43,6 +60,9 @@
             </div>
           </div>
         </div>
+        <?php 
+        }
+        ?>
 
         <footer class="pt-3 mt-4 text-muted border-top">
           Surosowan Cyber feat byruddy &copy; 2022

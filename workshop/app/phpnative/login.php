@@ -1,5 +1,11 @@
 <?php 
   require_once('config/helper.php');
+
+  // Check if the user is logged, redirect to welcome page
+  if(isset($_SESSION["loggedin"])){
+    header("Location: ".BASE_URL);
+    exit;
+  }
 ?>
 <!doctype html>
 <html lang="en">
@@ -26,17 +32,28 @@
                 Masuk untuk ke dashboard
               </div>
               <div class="card-body">
-                <div class="alert alert-danger" role="alert">
-                  A simple primary alert—check it out!
-                </div>
-                <form>
+                 <?php  
+                  $username = NULL;
+                  // Message for error for sign in
+                  if (isset($_SESSION['failSignIn'])) {
+                    $username = $_SESSION['failSignIn'][1];
+                    echo '<div class="alert alert-danger" role="alert"><b>Failed: </b>'.$_SESSION['failSignIn'][0].'</div>';
+                    unset($_SESSION['failSignIn']);
+                  }
+                  // Message for success from register
+                  if (isset($_SESSION['registered'])) {
+                    echo '<div class="alert alert-warning" role="alert"><b>Success: </b> Your account has been created, '.$_SESSION['registered'].' please fill your password to Dashboard.</div>';
+                    unset($_SESSION['registered']);
+                  }
+                ?>
+                <form action="<?= BASE_URL.'config/functions/login.php' ?>" method="POST">
                   <div class="mb-3">
                     <label for="inputUsername" class="form-label">Username</label>
-                    <input type="text" class="form-control" id="inputUsername">
+                    <input type="text" name="username" class="form-control" value="<?= $username ?>" id="inputUsername">
                   </div>
                   <div class="mb-3">
                     <label for="inputPassword" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="inputPassword">
+                    <input type="password" name="password" class="form-control" id="inputPassword">
                   </div>
                   <div class="d-grid mt-3">
                     <button type="submit" class="btn btn-primary">Login</button>

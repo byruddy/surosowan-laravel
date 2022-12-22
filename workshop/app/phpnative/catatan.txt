@@ -1,0 +1,48 @@
+This is note for development tracking of progress by module, 
+Database design is structure of this application database and 
+modul with label DONE is completed process with test by frontend 
+and backend.
+
+Recommended update this note for adding feature in future
+for help another programmer maybe will join to your project.
+
+-------------------------------------------------------------
+# DATABASE DESIGN
+	- pengguna :
+			- username CHAR(15) *
+			- password VARCHAR(255)
+			- nama VARCHAR(255)
+			- jenis_kelamin ENUM('Laki-laki', 'Wanita')
+			- tgl_diubah DATETIME
+			- tgl_dibuat DATETIME
+
+	- artikel :
+			- id  INT(10) *
+			- pengguna_id CHAR(15) #
+			- judul VARCHAR(255)
+			- isi_artikel TEXT
+			- tgl_diubah DATETIME
+			- tgl_dibuat DATETIME
+
+-------------------------------------------------------------
+# MODUL :
+	- Welcome DONE
+	- Login page DONE
+	- Register page DONE
+	- Header (button dinamic : login or profile) DONE
+	- Akun DONE :
+			- Change Profile DONE
+			- Change Password DONE
+			- Logout DONE
+
+	- Artikel :
+			- Create DONE
+			- Detail DONE
+			- Edit DONE
+			- Delete DONE
+			- List All DONE
+
+-------------------------------------------------------------
+
+> This application and note for support event "Workshop" 
+> github.com/byruddy/surosowan-laravel

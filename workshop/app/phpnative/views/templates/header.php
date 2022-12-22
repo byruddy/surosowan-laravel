@@ -6,7 +6,6 @@
   } else {
     require_once('../config/helper.php');
   }
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -27,7 +26,19 @@
           </a>
         </div>
         <div class="col text-end">
-          <a href="<?= BASE_URL.'views/akun.php' ?>" class="btn btn-primary">RUDI HIKMATULLAH</a>
+          <?php 
+          if(!isset($_SESSION['loggedin'])){
+          ?>
+          <a href="<?= BASE_URL.'login.php' ?>" class="btn btn-light border">Login</a>
+          <?php 
+          } else {
+          ?>
+          <a href="<?= BASE_URL.'views/artikel.php' ?>" class="btn btn-warning">Lihat Artikel</a>
+          <a href="<?= BASE_URL.'views/artikel/buat' ?>" class="btn btn-success">Buat Artikel Baru</a>
+          <a href="<?= BASE_URL.'views/akun.php' ?>" class="btn btn-primary"><?= $_SESSION['username'] ?></a>
+          <?php 
+          }
+          ?>
         </div>
       </div>
     </header>
