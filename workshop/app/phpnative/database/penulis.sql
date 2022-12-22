@@ -24,6 +24,7 @@ USE `penulis`;
 DROP TABLE IF EXISTS `artikel`;
 CREATE TABLE IF NOT EXISTS `artikel` (
   `id` int NOT NULL AUTO_INCREMENT,
+  `pengguna_id` char(15) NOT NULL DEFAULT '',
   `judul` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `isi_artikel` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `tgl_diubah` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
