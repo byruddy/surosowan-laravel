@@ -23,7 +23,11 @@ for help another programmer maybe will join to your project.
 			- isi_artikel TEXT
 			- tgl_diubah DATETIME
 			- tgl_dibuat DATETIME
-
+-------------------------------------------------------------
+# LOGIN 
+	- Username : radit
+	- Password : 123456
+	
 -------------------------------------------------------------
 # MODUL :
 	- Welcome DONE
