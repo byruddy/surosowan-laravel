@@ -13,5 +13,7 @@
         <small class="text-muted">- asdasd | {{ date('Y-m-d H:i:s') }}</small>
       </li>
     </ul>
+
+    <div class="alert alert-info mx-3" role="alert"><b>Maaf: </b>saat ini website belum memiliki artikel :(</div>
   </div>
 </div>
