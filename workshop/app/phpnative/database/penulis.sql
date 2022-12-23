@@ -17,7 +17,7 @@
 
 -- Dumping database structure for penulis
 DROP DATABASE IF EXISTS `penulis`;
-CREATE DATABASE IF NOT EXISTS `penulis` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE IF NOT EXISTS `penulis` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `penulis`;
 
 -- Dumping structure for table penulis.artikel
@@ -25,12 +25,12 @@ DROP TABLE IF EXISTS `artikel`;
 CREATE TABLE IF NOT EXISTS `artikel` (
   `id` int NOT NULL AUTO_INCREMENT,
   `pengguna_id` char(15) NOT NULL DEFAULT '',
-  `judul` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `isi_artikel` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `judul` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `isi_artikel` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `tgl_diubah` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `tgl_dibuat` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table penulis.artikel: ~0 rows (approximately)
 DELETE FROM `artikel`;
@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `pengguna` (
   `tgl_diubah` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `tgl_dibuat` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table penulis.pengguna: ~1 rows (approximately)
 DELETE FROM `pengguna`;
