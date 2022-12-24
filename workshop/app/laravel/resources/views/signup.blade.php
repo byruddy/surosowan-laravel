@@ -19,13 +19,13 @@
           </div>
           <div class="mb-3">
             <label for="inputName" class="form-label">Nama</label>
-            <input type="text" class="form-control" value="" name="nama" id="inputName" required>
+            <input type="text" class="form-control" value="" name="name" id="inputName" required>
           </div>
           <div class="mb-3">
             <label for="selectGender" class="form-label">Jenis Kelamin</label>
-            <select name="jenis_kelamin" class="form-select"id="selectGender">
-              <option value="Laki-laki">Laki-laki</option>
-              <option value="Wanita">>Wanita</option>
+            <select name="gender" class="form-select"id="selectGender">
+              <option value="male">Laki-laki</option>
+              <option value="female">>Wanita</option>
             </select>
           </div>
           <div class="d-grid mt-3">
