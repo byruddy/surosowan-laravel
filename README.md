@@ -36,10 +36,8 @@ Peserta mempunyai pengetahuan dasar tentang HTML, CSS & PHP
 #### Tools yang digunakan
 - Browser : Google Chrome
 - Text editor : Sublime Text / Visual Studio Code
-- Server : Laragon
-
-#### Laravel Version
-9.44.0
+- Server : Laragon / XAMPP 
+- PHP Version : ^8.0
 
 ---
 
