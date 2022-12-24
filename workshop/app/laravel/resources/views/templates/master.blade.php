@@ -21,7 +21,7 @@
             <div class="col text-end">
               <a href="{{ url('/articles') }}" class="btn btn-warning">Lihat Artikel</a>
               <a href="{{ url('/articles/create') }}" class="btn btn-success">Buat Artikel Baru</a>
-              <a href="{{ url('/account') }}" class="btn btn-primary">AS</a>
+              <a href="{{ url('/account') }}" class="btn btn-primary">Username Logged</a>
             </div>
           </div>
         </header>
