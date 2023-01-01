@@ -26,7 +26,14 @@
           <div class="col-md-4 text-end">
             <h4 class="text-danger">Rp. {{ number_format($barang->harga) }}</h4>
           </div>
-          <small class="d-block mt-3 text-muted">Dibuat pada : {{ $barang->created_at }}</small>
+          <div class="row p-0">
+            <div class="col">
+              <small class="d-block mt-3 text-muted">Dibuat pada : {{ $barang->created_at }}</small>
+            </div>
+            <div class="col text-end p-0">
+              <button class="btn btn-sm btn-danger">Hapus</button>
+            </div>
+          </div>
         </div>
       </li>
       @endforeach
